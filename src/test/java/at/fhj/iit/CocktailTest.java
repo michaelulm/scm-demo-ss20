@@ -26,19 +26,21 @@ public class CocktailTest {
     @Test
     @DisplayName("Testing constructor")
     public void testConstructor(){
-        fail();
+        assertEquals("Vodka Apple", cocktail.getName());
     }
 
     @Test
     @DisplayName("Testing alcohol percent")
     public void testAlcoholPercent(){
-        fail();
+        assertEquals( 25.0, cocktail.getAlcoholPercent(), 0.001);
     }
 
     @Test
     @DisplayName("Testing volume of drink")
     public void testVolume(){
-        fail();
+
+        assertEquals(0.2, cocktail.getVolume(), 0.001);
+
     }
 
 
