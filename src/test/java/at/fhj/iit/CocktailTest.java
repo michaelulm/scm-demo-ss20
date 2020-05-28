@@ -44,4 +44,11 @@ public class CocktailTest {
     }
 
 
+    @Test
+    @DisplayName("Check Volume")
+    public void testUse(){
+        assertEquals(true, cocktail.use(0.2));
+    }
+
+
 }

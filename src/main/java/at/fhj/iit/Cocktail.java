@@ -34,6 +34,7 @@ public class Cocktail extends Drink {
         }
         return volume;
     }
+
     /**
      * Returns alcohol volume percent of cocktail by calculating mean of the percentages of the liquid
      */
@@ -47,15 +48,23 @@ public class Cocktail extends Drink {
     }
 
 
-    public void use(double volume){
 
+
+    public boolean use(double volume){
         if(!finished)
             shakeOrStirIt();
 
+        return true;
     }
 
-
-    private boolean shakeOrStirIt(){
+    /**
+     * shake or stir any liquid in our cocktail
+     * <b>please use new method {@link Cocktail#use()} instead</b>
+     *
+     * @return called successful
+     */
+    @Deprecated
+    public boolean shakeOrStirIt(){
         Liquid cocktailLiquid = new Liquid(this.getName(), getVolume(), getAlcoholPercent());
 
         ingredients = new ArrayList<Liquid>();
